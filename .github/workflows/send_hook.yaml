@@ -10,6 +10,7 @@ jobs:
     steps:
     - name: Workflow Webhook Action
       uses: distributhor/workflow-webhook@v2.0.3
-      with:
-        url: "https://smee.io/bifhbaXwHKBhgBI"
-        json: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}" }'
+      env:
+        webhook_url: "https://smee.io/bifhbaXwHKBhgBI"
+        webhook_secret: 0c8f7960804f08cdc8a278bdd8fa22cdb7946e9e
+        data: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}" }'
