@@ -1,11 +1,11 @@
-name: timersignal
+name: daily_hook
 
 on:
   schedule:
     - cron:  '0/5 * * * *'
 
 jobs:
-  test_schedule:
+  send_hook:
     runs-on: ubuntu-latest
     steps:
     - name: Workflow Webhook Action
