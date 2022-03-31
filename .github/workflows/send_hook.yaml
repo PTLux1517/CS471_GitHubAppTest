@@ -2,7 +2,7 @@ name: daily_hook
 
 on:
   schedule:
-    - cron:  '0/5 * * * *'
+    - cron:  '0/30 * * * *'
 
 jobs:
   send_hook:
@@ -11,6 +11,5 @@ jobs:
     - name: Workflow Webhook Action
       uses: distributhor/workflow-webhook@v2.0.3
       env:
-        webhook_type: 'json-extended'
         webhook_url: "https://smee.io/bifhbaXwHKBhgBI"
         webhook_secret: 0c8f7960804f08cdc8a278bdd8fa22cdb7946e9e
